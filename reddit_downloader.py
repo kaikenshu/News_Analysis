@@ -6,7 +6,7 @@ import requests
 from io import BytesIO
 from PIL import Image, ImageFilter
 import pytesseract
-
+from parameters import subreddits
 from constants import REDDIT_CLIENT_ID, REDDIT_CLIENT_SECRET, REDDIT_USER_AGENT, REDDIT_USER_NAME, REDDIT_USER_PASSWORD
 
 # **Initialize Reddit Instance**
@@ -17,21 +17,6 @@ reddit = praw.Reddit(
     username=REDDIT_USER_NAME,
     password=REDDIT_USER_PASSWORD
 )
-
-#needed variables
-subreddits = [
-    'Bitcoin',
-    'dogecoin',
-    # 'MachineLearning',
-    # 'Artificial',
-    # 'TechNews',
-    # 'Economics',
-    # 'FinancialNews',
-    # 'Finance',
-    # 'Business',
-    # 'StockMarket',
-    # 'WallStreetBets',
-]
 
 now_pst = datetime.now()
 today_date = now_pst.strftime('%Y-%m-%d %H:%M:%S')
