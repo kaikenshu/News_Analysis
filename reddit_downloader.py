@@ -1,7 +1,6 @@
 from datetime import datetime, timezone
 import praw
 from praw.models import Comment
-from zoneinfo import ZoneInfo
 import requests
 from io import BytesIO
 from PIL import Image, ImageFilter

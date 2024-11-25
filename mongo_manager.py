@@ -18,7 +18,7 @@ def access_mongo():
 def update_reddit_raw(client, reddit_data):
     try:
         db = client['news']
-        collection = db['reddit_raw']
+        collection = db['reddit_raw_test']
         for article_detail in reddit_data:
             collection.insert_one(article_detail)
         print(f"Inserted Reddit articles")
@@ -60,7 +60,7 @@ def fetch_reddit_raw(client):
 def update_reddit_summaries(client, gpt_summaries):
     try:
         db = client['news']
-        collection = db['reddit_summaries']
+        collection = db['reddit_summaries_test']
         for summary in gpt_summaries:
             collection.insert_one(summary)
         print(f"Inserted Reddit articles")
